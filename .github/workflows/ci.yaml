@@ -12,7 +12,7 @@ jobs:
       - name: Welcome steps
         run: echo "Allah Always helps me"
       - name: checkout repo
-        uses: actions/checlout@v4
+        uses: actions/checkout@v4
       - name: Intsall Linting Tools
         run: 
           npm intsall --save-dev htmlhint
