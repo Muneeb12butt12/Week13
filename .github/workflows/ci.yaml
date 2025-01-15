@@ -1,0 +1,23 @@
+on:
+  pull_request:
+    branches:
+      - develop
+  push:
+    branches:
+      - develop
+jobs:
+  linting-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome steps
+        run: echo "Allah Always helps me"
+      - name: checkout repo
+        uses: actions/checlout@v4
+      - name: Intsall Linting Tools
+        run: 
+          npm intsall --save-dev htmlhint
+          npm intsall --save-dev stylelint
+      - name: Lint Html & CSS Files
+        run: 
+          npx  HTMLHint "**/*.html"
+          npx  Stylelint "**/*.css"
