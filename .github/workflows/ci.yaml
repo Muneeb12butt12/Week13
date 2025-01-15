@@ -11,13 +11,13 @@ jobs:
     steps:
       - name: Welcome steps
         run: echo "Allah Always helps me"
-      - name: checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4
       - name: Install Linting Tools
-        run: 
+        run: |
           npm install --save-dev htmlhint
           npm install --save-dev stylelint
-      - name: Lint Html & CSS Files
-        run: 
-          npx  HTMLHint "**/*.html"
-          npx  Stylelint "**/*.css"
+      - name: Lint HTML & CSS Files
+        run: |
+          npx htmlhint "**/*.html"
+          npx stylelint "**/*.css"
