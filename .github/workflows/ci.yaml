@@ -13,10 +13,10 @@ jobs:
         run: echo "Allah Always helps me"
       - name: checkout repo
         uses: actions/checkout@v4
-      - name: Intsall Linting Tools
+      - name: Install Linting Tools
         run: 
-          npm intsall --save-dev htmlhint
-          npm intsall --save-dev stylelint
+          npm install --save-dev htmlhint
+          npm install --save-dev stylelint
       - name: Lint Html & CSS Files
         run: 
           npx  HTMLHint "**/*.html"
